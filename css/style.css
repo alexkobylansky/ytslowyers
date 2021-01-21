@@ -1,0 +1,297 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+main {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../img/041.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+.border {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  border: 1px solid #525252;
+  padding: 20px 10px;
+}
+header {
+  width: 100%;
+}
+.left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+h1 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+h1 span {
+  display: block;
+  font-size: 1rem;
+  padding: .5rem 0;
+}
+.mainBlock {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainBlock img {
+  width: 50%;
+  float: left;
+  object-fit: contain;
+  border: 1px solid #656565;
+  margin-right: 20px;
+}
+.mainBlock .description{
+  width: 100%;
+}
+.mainBlock .description p {
+  font-size: .9rem;
+  line-height: 1.8;
+  margin: .5rem 0;
+  text-align: justify;
+}
+.mainBlock .description p:first-of-type {
+  margin: 0 0 1rem 0;
+}
+.form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+form::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100,100,100,0.2) url("../img/placeholder.svg") center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.5s;
+}
+form.sending::after{
+  opacity: 1;
+  visibility: visible;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+form .wrap:last-of-type {
+  margin-top: 20px;
+}
+form .wrap input {
+  width: 100%;
+  padding: 20px;
+  border-radius: 0;
+  background-color: #373737;
+  color: #cdcdcd;
+  letter-spacing: 1px;
+  min-width: 250px;
+  margin: 5px 0;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  border-radius: 0;
+  padding: 20px;
+  background-color: #373737;
+  color: #cdcdcd;
+  margin: 5px 0 !important;
+}
+form button {
+  transition: all .2s;
+  background-color: #90785b;
+  cursor: pointer;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0;
+  color: #cdcdcd;
+  text-transform: uppercase;
+  font-size: .9rem;
+  letter-spacing: 1px;
+  min-width: 250px;
+  margin: 5px 0;
+  position: relative;
+}
+form button:hover {
+  transition: background-color .25s;
+  background-color: #735f48;
+}
+form button:active{
+  transform: scale(.95);
+}
+form span {
+  color: #858585;
+  font-size: .7rem;
+  line-height: 1;
+}
+.contacts {
+  width: 100%;
+  margin-top: 2rem;
+}
+.contacts .wrap {
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-direction: row;
+  margin: 10px 0;
+}
+.contacts .wrap span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.contacts .wrap a {
+  color: #d0d0d0;
+}
+.contacts .social {
+  display: flex;
+  width: 110px;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.contacts .social li {
+  cursor: pointer;
+}
+.contacts .social li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contacts .whatsUp,
+.contacts .telegram {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ebebeb;
+  border-radius: 20%;
+  background-color: #1a1a1a;
+  font-size: 20px;
+  transition: all .25s;
+}
+.contacts .whatsUp:hover {
+  box-shadow: 0 0 10px #d0d0d0;
+  transition: all .25s;
+}
+.contacts .whatsUp:hover .fa-whatsapp {
+  color: #34C154;
+  transition: all .25s;
+}
+.contacts .telegram:hover {
+  box-shadow: 0 0 10px #d0d0d0;
+  transition: all .25s;
+}
+.contacts .telegram:hover .fa-telegram-plane {
+  color: #0F85C0;
+  transition: all .25s;
+}
+.brake {
+  display: block;
+}
+.contacts .fa-map-marker-alt,
+.contacts .fa-phone-alt,
+.contacts .fa-envelope {
+  position: relative;
+  top: 2px;
+  color: red;
+  margin-right: 15px;
+}
+@media (min-width: 576px) {
+  .mainBlock img {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .mainBlock img {
+    width: 40%;
+  }
+  main {
+    padding: 30px;
+  }
+  .border {
+    padding: 20px;
+  }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1024px) {
+  main {
+    padding: 30px;
+  }
+  .border {
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 30px;
+  }
+  .left {
+    width: 67%;
+  }
+  .right {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    padding: 50px;
+  }
+  .border {
+    padding: 40px;
+    background-color: rgba(0,0,0,.20);
+  }
+  .mainBlock{
+    flex-direction: row;
+  }
+  .mainBlock img{
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1400px) {
+  .mainBlock img {
+    width: 32%;
+  }
+}
+@media (min-width: 1880px) {
+  form .wrap {
+    flex-direction: row;
+  }
+  .form .wrap input {
+    width: calc(50% - 10px);
+  }
+  form .wrap button{
+    width: calc(50% - 10px);
+    margin-right: 10px;
+  }
+  .form .wrap input:first-of-type {
+    margin-right: 10px;
+  }
+}
